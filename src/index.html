@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -10,7 +10,294 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 5 starter </h3>
+    <header class="header">
+      <div class="header__left">
+        <button type="button" class="btn btn--type--burger">
+          <img src="../img/header/burger.svg" alt="menu" />
+        </button>
+        <div class="header__divider header__divider--side--left"></div>
+        <img class="header__logo" src="../img/header/Group.svg" alt="logo" />
+      </div>
+
+      <div class="header__title-wrapper">
+        <div class="header__highlight"></div>
+        <h1 class="header__title">Услуги и сервисы</h1>
+      </div>
+
+      <div class="header__right">
+        <button type="button" class="btn btn--view--tablet-only">
+          <img src="../img/header/call.svg" alt="call" />
+        </button>
+        <button type="button" class="btn btn--view--tablet-only">
+          <img src="../img/header/chat.svg" alt="chat" />
+        </button>
+        <button type="button" class="btn btn--view--tablet-only">
+          <img src="../img/header/profile.svg" alt="profile" />
+        </button>
+        <div class="header__divider header__divider--side--right"></div>
+        <button type="button" class="btn btn--type--repair">
+          <span class="btn__text btn__text--type--repair">Оставить заявку</span>
+          <img
+            src="../img/header/repair.svg"
+            alt="repair"
+            class="btn__img btn__img--type--repair"
+          />
+        </button>
+        <button type="button" class="btn btn--type--checkstatus">
+          <span class="btn__text btn__text--type--checkstatus"
+            >Статус ремонта</span
+          >
+          <img
+            src="../img/header/checkstatus.svg"
+            alt="checkstatus"
+            class="btn__img btn__img--type--checkstatus"
+          />
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="slide-menu">
+        <button
+          type="button"
+          class="slide-menu__button slide-menu__button--state--active"
+          >Ремонтируемые устройства</button
+        >
+        <button type="button" class="slide-menu__button"
+          >Дополнительные услуги</button
+        >
+        <button type="button" class="slide-menu__button">Цены на услуги</button>
+        <button type="button" class="slide-menu__button"
+          >Адреса сервисных центров</button
+        >
+        <button type="button" class="slide-menu__button"
+          >Специальные цены</button
+        >
+        <button type="button" class="slide-menu__button">Отзывы</button>
+      </div>
+
+      <div class="info-container">
+        <div class="info-container__left">
+          <p
+            class="info-container__paragraph info-container__paragraph--size--first"
+          >
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+          </p>
+          <br />
+          <p
+            class="info-container__paragraph info-container__paragraph--size--second"
+          >
+            <span
+              class="info-container__text-part info-container__text-part--visible--always"
+            >
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера
+            </span>
+            <span
+              class="info-container__text-part info-container__text-part--visible--desktop"
+            >
+              , что подтверждает большое количество постоянных клиентов. Мы
+              гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </span>
+          </p>
+          <button type="button" class="btn-readmore">
+            <img src="../img/section-1/expand.svg" alt="" />
+            <span class="btn-readmore__text">Читать далее</span>
+          </button>
+        </div>
+
+        <div class="info-container__right">
+          <img
+            class="info-container__photo"
+            src="../img/section-1/Picture Copy.svg"
+            alt="Lobby photo"
+          />
+        </div>
+      </div>
+    </main>
+
+    <section class="brands">
+      <h2 class="brands__h2">Ремонт техники различных брендов</h2>
+    </section>
+
+    <div class="swiper swiper-brands">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Lenovo.svg"
+            alt="Brand Lenovo"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Samsung.svg"
+            alt="Brand Samsung"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Apple.svg"
+            alt="Brand Apple"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Bosch.svg"
+            alt="Brand Bosch"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Hp.svg"
+            alt="Brand Hp"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Acer.svg"
+            alt="Brand Acer"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/ViewSonic.svg"
+            alt="Brand ViewSonic"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Sony.svg"
+            alt="Brand Sony"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Lenovo.svg"
+            alt="Brand Lenovo"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Samsung.svg"
+            alt="Brand Samsung"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide brands-slider__card">
+          <img
+            src="../img/section-brands/Apple.svg"
+            alt="Brand Apple"
+            class="slider__img"
+          />
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="brands">
+      <button class="brands__btn">
+        <img src="../img/section-brands/ExpandDown.svg" alt="" />
+        <span>Показать всё</span>
+      </button>
+    </div>
+
+    <section class="equipments">
+      <h2 class="brands__h2">Ремонт различных видов техники</h2>
+    </section>
+
+    <div class="swiper swiper-equipments">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт ноутбуков</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт планшетов</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт ПК</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт мониторов</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт принтеров</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+        <div class="swiper-slide equipments-slider__card">
+          <p>Ремонт телефонов</p>
+          <button class="slider__btn">
+            <img src="../img/section-brands/go.svg" alt="Go" />
+          </button>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="equipments">
+      <button class="equipments__btn">
+        <img src="../img/section-equipments/ExpandDown.svg" alt="" />
+        <span>Показать всё</span>
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
