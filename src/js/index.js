@@ -98,3 +98,31 @@ setupShowMore(
   '.equipments__btn',
   '../img/section-equipments'
 )
+
+function setupReadMore() {
+  const readMoreBtn = document.querySelector('.btn-readmore')
+  const secondParagraph = document.querySelector(
+    '.info-container__paragraph--size--second'
+  )
+
+  if (!readMoreBtn || !secondParagraph) return
+
+  const btnText = readMoreBtn.querySelector('.btn-readmore__text')
+  let isExpanded = false
+
+  readMoreBtn.addEventListener('click', function () {
+    isExpanded = !isExpanded
+
+    if (isExpanded) {
+      secondParagraph.style.display = 'block'
+      if (btnText) btnText.textContent = 'Свернуть'
+      readMoreBtn.classList.add('btn-readmore--expanded')
+    } else {
+      secondParagraph.style.display = 'none'
+      if (btnText) btnText.textContent = 'Читать далее'
+      readMoreBtn.classList.remove('btn-readmore--expanded')
+    }
+  })
+}
+
+setupReadMore()

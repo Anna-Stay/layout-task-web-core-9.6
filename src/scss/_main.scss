@@ -75,6 +75,14 @@
   cursor: pointer;
   user-select: none;
 
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &--expanded img {
+    transform: rotate(180deg);
+  }
+
   &__text {
     font-size: 16px;
     font-weight: 500;
@@ -94,11 +102,11 @@
 
 /* Бренды */
 .brands {
-  padding: 16px;
+  padding: 0;
   width: 100%;
   height: auto;
-  border-top: 1px solid #d9fff5;
-  background: linear-gradient(to right, #f8f8f8, #ffffff);
+  // border-top: 1px solid #d9fff5;
+  // background: linear-gradient(to right, #f8f8f8, #ffffff);
 
   &__btn {
     display: none;
@@ -134,7 +142,7 @@
     z-index: 10;
     width: 24px;
     height: 81px;
-    background: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f8f8);
   }
 }
 
