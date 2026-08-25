@@ -419,3 +419,135 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* СЕКЦИЯ ЦЕН */
+.prices {
+  width: 100%;
+}
+
+.swiper-prices {
+  padding-bottom: 28px;
+  margin: 16px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 24px;
+    height: 200px;
+    background: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8);
+  }
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    /* margin-bottom убран, чтобы не ломать высоту 200px */
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+
+    .price-card__field {
+      width: auto;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #7e7e82;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #1b1c21;
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      height: 32px;
+      width: auto;
+    }
+  }
+}
+
+.prices__note {
+  padding: 0 16px 24px;
+  text-align: left;
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #1b1c21;
+    margin-bottom: 16px;
+  }
+}
+
+.prices__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1c21;
+  text-decoration: none;
+  line-height: 24px;
+
+  /* Обертка для слова "предложение" и стрелки */
+  &-more {
+    white-space: nowrap; /* Не дает оторвать стрелку от слова */
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  }
+}
+
+/* ФУТЕР */
+.footer {
+  padding: 16px;
+  border-top: 1px solid #d9fff5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #7e7e82;
+  }
+
+  &__link {
+    color: #7e7e82;
+    text-decoration: none;
+  }
+}

@@ -4,6 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 
 let swiperBrands
 let swiperEquipments
+let swiperPrices
 
 function initSwiper(swiperInstance, selector) {
   const el = document.querySelector(selector)
@@ -35,6 +36,7 @@ function initSwiper(swiperInstance, selector) {
 function manageAllSwipers() {
   swiperBrands = initSwiper(swiperBrands, '.swiper-brands')
   swiperEquipments = initSwiper(swiperEquipments, '.swiper-equipments')
+  swiperPrices = initSwiper(swiperPrices, '.swiper-prices')
 }
 
 function setupShowMore(cardSelector, btnSelector, imgPath) {
