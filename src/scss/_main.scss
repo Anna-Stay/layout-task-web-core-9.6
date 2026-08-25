@@ -1,0 +1,390 @@
+.main-content {
+  background-color: #f8f8f8;
+}
+
+.slide-menu {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 10px;
+  margin-bottom: 24px;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__button {
+    height: 40px;
+    padding: 0 20px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    border: none;
+    font-family: 'TTLakes', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e82;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &--state--active {
+      background-color: #ffffff;
+      border: 2px solid #b8ffec;
+    }
+  }
+}
+
+.info-container {
+  font-family: 'TTLakes', sans-serif;
+  min-height: 322px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #1b1c21;
+  margin-bottom: 12px;
+  padding-left: 16px;
+
+  &__paragraph--size--second {
+    display: none;
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #ffffff;
+  }
+}
+
+.btn-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+}
+
+.section-title {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7e7e82;
+  text-transform: uppercase;
+  border-top: 1px solid #d9fff5;
+  background: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+
+/* Бренды */
+.brands {
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #d9fff5;
+  background: linear-gradient(to right, #f8f8f8, #ffffff);
+
+  &__btn {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 16px;
+    font-family: 'TTLakes', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c21;
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.swiper-brands {
+  padding-bottom: 28px;
+  margin: 16px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8);
+  }
+}
+
+/* Свайпер (общие) */
+.swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 72px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+
+  img {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.slider__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet {
+  background-color: #dddddd;
+  opacity: 1;
+
+  &-active {
+    background-color: #b5b6bc;
+  }
+}
+
+/* Оборудование */
+.swiper-equipments {
+  padding-bottom: 28px;
+  margin: 16px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 24px;
+    height: 160px;
+    background: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8);
+  }
+}
+
+.equipments-slider__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 240px;
+  height: 160px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+
+  .equipments-slider__text {
+    font-family: 'TTLakes', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #1b1c21;
+  }
+
+  .slider__btn {
+    align-self: flex-end;
+  }
+}
+
+.equipments__btn {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 16px;
+  font-family: 'TTLakes', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1c21;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Цены */
+.prices {
+  width: 100%;
+
+  &__note {
+    padding: 0 16px 24px;
+    text-align: left;
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #1b1c21;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c21;
+    text-decoration: none;
+    line-height: 24px;
+
+    &-more {
+      white-space: nowrap;
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.swiper-prices {
+  padding-bottom: 28px;
+  margin: 16px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 24px;
+    height: 200px;
+    background: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8);
+  }
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+
+    .price-card__field {
+      width: auto;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #7e7e82;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #1b1c21;
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      height: 32px;
+      width: auto;
+    }
+  }
+}
+
+/* Медиазапросы */
+@media (min-width: 768px) {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .swiper-pagination,
+  .swiper::after {
+    display: none;
+  }
+
+  .brands__btn,
+  .equipments__btn {
+    display: flex;
+  }
+
+  .swiper-equipments::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-wrapper,
+  .swiper-equipments .swiper-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
