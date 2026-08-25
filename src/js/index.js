@@ -1,14 +1,14 @@
-import '../scss/style.scss'
-import Swiper from 'swiper'
-import { Navigation, Pagination } from 'swiper/modules'
+import '../scss/style.scss';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
-let swiperBrands
-let swiperEquipments
-let swiperPrices
+let swiperBrands;
+let swiperEquipments;
+let swiperPrices;
 
 function initSwiper(swiperInstance, selector) {
-  const el = document.querySelector(selector)
-  if (!el) return undefined
+  const el = document.querySelector(selector);
+  if (!el) return undefined;
 
   if (window.innerWidth < 768) {
     if (!swiperInstance) {
@@ -22,107 +22,107 @@ function initSwiper(swiperInstance, selector) {
           el: `${selector} .swiper-pagination`,
           clickable: true
         }
-      })
+      });
     }
-    return swiperInstance
+    return swiperInstance;
   } else {
     if (swiperInstance) {
-      swiperInstance.destroy(true, true)
+      swiperInstance.destroy(true, true);
     }
-    return undefined
+    return undefined;
   }
 }
 
 function manageAllSwipers() {
-  swiperBrands = initSwiper(swiperBrands, '.swiper-brands')
-  swiperEquipments = initSwiper(swiperEquipments, '.swiper-equipments')
-  swiperPrices = initSwiper(swiperPrices, '.swiper-prices')
+  swiperBrands = initSwiper(swiperBrands, '.swiper-brands');
+  swiperEquipments = initSwiper(swiperEquipments, '.swiper-equipments');
+  swiperPrices = initSwiper(swiperPrices, '.swiper-prices');
 }
 
 function setupShowMore(cardSelector, btnSelector, imgPath) {
-  const cards = document.querySelectorAll(cardSelector)
-  const button = document.querySelector(btnSelector)
+  const cards = document.querySelectorAll(cardSelector);
+  const button = document.querySelector(btnSelector);
 
-  if (!cards.length || !button) return
+  if (!cards.length || !button) return;
 
-  const buttonText = button.querySelector('span')
-  const buttonImage = button.querySelector('img')
-  let isOpen = false
+  const buttonText = button.querySelector('span');
+  const buttonImage = button.querySelector('img');
+  let isOpen = false;
 
   function update() {
     if (window.innerWidth < 768) {
-      cards.forEach((card) => card.classList.remove('hidden'))
-      return
+      cards.forEach((card) => card.classList.remove('hidden'));
+      return;
     }
 
-    let visibleCards = 6
+    let visibleCards = 6;
     if (window.innerWidth >= 1120) {
-      visibleCards = 8
+      visibleCards = 8;
     }
 
     if (isOpen) {
-      cards.forEach((card) => card.classList.remove('hidden'))
-      if (buttonText) buttonText.textContent = 'Скрыть'
-      if (buttonImage) buttonImage.src = `${imgPath}/ExpandUp.svg`
+      cards.forEach((card) => card.classList.remove('hidden'));
+      if (buttonText) buttonText.textContent = 'Скрыть';
+      if (buttonImage) buttonImage.src = `${imgPath}/ExpandUp.svg`;
     } else {
       cards.forEach((card, index) => {
         if (index < visibleCards) {
-          card.classList.remove('hidden')
+          card.classList.remove('hidden');
         } else {
-          card.classList.add('hidden')
+          card.classList.add('hidden');
         }
-      })
-      if (buttonText) buttonText.textContent = 'Показать всё'
-      if (buttonImage) buttonImage.src = `${imgPath}/ExpandDown.svg`
+      });
+      if (buttonText) buttonText.textContent = 'Показать всё';
+      if (buttonImage) buttonImage.src = `${imgPath}/ExpandDown.svg`;
     }
   }
 
   button.onclick = function () {
-    isOpen = !isOpen
-    update()
-  }
+    isOpen = !isOpen;
+    update();
+  };
 
-  update()
-  window.addEventListener('resize', update)
+  update();
+  window.addEventListener('resize', update);
 }
 
 window.addEventListener('resize', function () {
-  manageAllSwipers()
-})
+  manageAllSwipers();
+});
 
-manageAllSwipers()
+manageAllSwipers();
 
-setupShowMore('.brands-slider__card', '.brands__btn', '../img/section-brands')
+setupShowMore('.brands-slider__card', '.brands__btn', '../img/section-brands');
 setupShowMore(
   '.equipments-slider__card',
   '.equipments__btn',
   '../img/section-equipments'
-)
+);
 
 function setupReadMore() {
-  const readMoreBtn = document.querySelector('.btn-readmore')
+  const readMoreBtn = document.querySelector('.btn-readmore');
   const secondParagraph = document.querySelector(
     '.info-container__paragraph--size--second'
-  )
+  );
 
-  if (!readMoreBtn || !secondParagraph) return
+  if (!readMoreBtn || !secondParagraph) return;
 
-  const btnText = readMoreBtn.querySelector('.btn-readmore__text')
-  let isExpanded = false
+  const btnText = readMoreBtn.querySelector('.btn-readmore__text');
+  let isExpanded = false;
 
   readMoreBtn.addEventListener('click', function () {
-    isExpanded = !isExpanded
+    isExpanded = !isExpanded;
 
     if (isExpanded) {
-      secondParagraph.style.display = 'block'
-      if (btnText) btnText.textContent = 'Свернуть'
-      readMoreBtn.classList.add('btn-readmore--expanded')
+      secondParagraph.style.display = 'block';
+      if (btnText) btnText.textContent = 'Свернуть';
+      readMoreBtn.classList.add('btn-readmore--expanded');
     } else {
-      secondParagraph.style.display = 'none'
-      if (btnText) btnText.textContent = 'Читать далее'
-      readMoreBtn.classList.remove('btn-readmore--expanded')
+      secondParagraph.style.display = 'none';
+      if (btnText) btnText.textContent = 'Читать далее';
+      readMoreBtn.classList.remove('btn-readmore--expanded');
     }
-  })
+  });
 }
 
-setupReadMore()
+setupReadMore();
