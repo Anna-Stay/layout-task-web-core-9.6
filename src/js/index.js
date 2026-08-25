@@ -84,15 +84,12 @@ function setupShowMore(cardSelector, btnSelector, imgPath) {
   window.addEventListener('resize', update)
 }
 
-// Слушатель изменения размера окна для свайперов
 window.addEventListener('resize', function () {
   manageAllSwipers()
 })
 
-// Первичный запуск
 manageAllSwipers()
 
-// Запуск для обеих секций с передачей путей к их иконкам
 setupShowMore('.brands-slider__card', '.brands__btn', '../img/section-brands')
 setupShowMore(
   '.equipments-slider__card',
