@@ -53,7 +53,6 @@ function setupShowMore(
   button.classList.add('btn-show-more');
 
   const buttonText = button.querySelector('span');
-  // const buttonImage = button.querySelector('img');
   let isOpen = false;
 
   function update() {
@@ -71,7 +70,6 @@ function setupShowMore(
       cards.forEach((card) => card.classList.remove('hidden'));
       if (buttonText) buttonText.textContent = 'Скрыть';
       button.classList.add('btn-show-more--active');
-      // if (buttonImage) buttonImage.src = `${imgPath}/ExpandUp.svg`;
     } else {
       cards.forEach((card, index) => {
         if (index < visibleCards) {
@@ -82,7 +80,6 @@ function setupShowMore(
       });
       if (buttonText) buttonText.textContent = 'Показать всё';
       button.classList.remove('btn-show-more--active');
-      //if (buttonImage) buttonImage.src = `${imgPath}/ExpandDown.svg`;
     }
   }
 
@@ -121,11 +118,9 @@ function setupReadMore() {
   });
 }
 
-// Инициализация Swiper
 manageAllSwipers();
 window.addEventListener('resize', manageAllSwipers);
 
-// Инициализация "Показать всё" (вызываем только один раз!)
 setupShowMore('.brands-slider__card', '.brands__btn', '../img/section-brands');
 setupShowMore(
   '.equipments-slider__card',
@@ -134,5 +129,4 @@ setupShowMore(
   { tablet: 3, desktop: 4 }
 );
 
-// Инициализация "Читать далее"
 setupReadMore();

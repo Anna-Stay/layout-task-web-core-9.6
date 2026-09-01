@@ -296,44 +296,25 @@
         <h2 class="section-title">Цены на услуги</h2>
 
         <div class="swiper swiper-prices">
-          <div class="swiper-wrapper">
-            <!-- Слайд 1 -->
-            <div class="swiper-slide price-card">
-              <div class="price-card__field">
-                <span class="price-card__label">Ремонтные услуги</span>
-                <span class="price-card__value"
-                  >Тестирование с выдачей технического заключения</span
-                >
-              </div>
-              <div class="price-card__field">
-                <span class="price-card__label">Цена</span>
-                <span class="price-card__value">Бесплатно</span>
-              </div>
-              <div class="price-card__bottom">
-                <div class="price-card__field">
-                  <span class="price-card__label">Срок</span>
-                  <span class="price-card__value">30-120 мин</span>
-                </div>
-                <button type="button" class="price-card__btn">
-                  <img
-                    src="../img/section-prices/Group 10.svg"
-                    alt="Заказать"
-                  />
-                </button>
-              </div>
-            </div>
+          <div class="prices__table-header">
+            <span class="prices__header-col">Ремонтные услуги</span>
+            <span class="prices__header-col">Цена</span>
+            <span class="prices__header-col">Срок</span>
+            <span class="prices__header-col"></span>
+          </div>
 
+          <div class="swiper-wrapper">
             <div class="swiper-slide price-card">
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--service">
                 <span class="price-card__label">Ремонтные услуги</span>
                 <span class="price-card__value">Диагностика</span>
               </div>
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--price">
                 <span class="price-card__label">Цена</span>
                 <span class="price-card__value">Бесплатно</span>
               </div>
               <div class="price-card__bottom">
-                <div class="price-card__field">
+                <div class="price-card__field price-card__field--time">
                   <span class="price-card__label">Срок</span>
                   <span class="price-card__value">30 мин</span>
                 </div>
@@ -347,16 +328,16 @@
             </div>
 
             <div class="swiper-slide price-card">
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--service">
                 <span class="price-card__label">Ремонтные услуги</span>
                 <span class="price-card__value">Замена дисплея</span>
               </div>
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--price">
                 <span class="price-card__label">Цена</span>
                 <span class="price-card__value">1000 ₽</span>
               </div>
               <div class="price-card__bottom">
-                <div class="price-card__field">
+                <div class="price-card__field price-card__field--time">
                   <span class="price-card__label">Срок</span>
                   <span class="price-card__value">30-120 мин</span>
                 </div>
@@ -370,18 +351,18 @@
             </div>
 
             <div class="swiper-slide price-card">
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--service">
                 <span class="price-card__label">Ремонтные услуги</span>
                 <span class="price-card__value"
                   >Замена полифонического динамика</span
                 >
               </div>
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--price">
                 <span class="price-card__label">Цена</span>
                 <span class="price-card__value">1000 ₽</span>
               </div>
               <div class="price-card__bottom">
-                <div class="price-card__field">
+                <div class="price-card__field price-card__field--time">
                   <span class="price-card__label">Срок</span>
                   <span class="price-card__value">30-120 мин</span>
                 </div>
@@ -395,27 +376,56 @@
             </div>
 
             <div class="swiper-slide price-card">
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--service">
+                <span class="price-card__label">Ремонтные услуги</span>
+                <span class="price-card__value"
+                  >Тестирование с выдачей технического заключения</span
+                >
+              </div>
+              <div class="price-card__field price-card__field--price">
+                <span class="price-card__label">Цена</span>
+                <span class="price-card__value">1000 ₽</span>
+              </div>
+              <div class="price-card__bottom">
+                <div class="price-card__field price-card__field--time">
+                  <span class="price-card__label">Срок</span>
+                  <span class="price-card__value">30-120 мин</span>
+                </div>
+                <button type="button" class="price-card__btn">
+                  <img
+                    src="../img/section-prices/Group 10.svg"
+                    alt="Заказать"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper-slide price-card">
+              <div class="price-card__field price-card__field--service">
                 <span class="price-card__label">Ремонтные услуги</span>
                 <span class="price-card__value"
                   >Замена программного обеспечения</span
                 >
               </div>
-              <div class="price-card__field">
+              <div class="price-card__field price-card__field--price">
                 <span class="price-card__label">Цена</span>
                 <span class="price-card__value">1000 ₽</span>
               </div>
               <div class="price-card__bottom">
-                <div class="price-card__field">
+                <div class="price-card__field price-card__field--time">
                   <span class="price-card__label">Срок</span>
                   <span class="price-card__value">30-120 мин</span>
                 </div>
+                <button type="button" class="price-card__btn">
+                  <img
+                    src="../img/section-prices/Group 10.svg"
+                    alt="Заказать"
+                  />
+                </button>
               </div>
-              <button type="button" class="price-card__btn">
-                <img src="../img/section-prices/Group 10.svg" alt="Заказать" />
-              </button>
             </div>
           </div>
+
           <div class="swiper-pagination"></div>
         </div>
 
@@ -427,27 +437,31 @@
           </p>
 
           <a href="#" class="prices__link">
-            Получить коммерческое
-            <span class="prices__link-more"
-              >предложение<img src="../img/section-prices/more.svg" alt=""
-            /></span>
+            <span>Получить коммерческое предложение</span>
+            <img
+              src="../img/section-prices/more.svg"
+              alt=""
+              class="prices__link-icon"
+            />
           </a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__text">
-        © 2019 CPS<br />
-        Разработано командой Apesong
-      </p>
-      <p class="footer__text">
+      <div class="footer__col footer__col--left">
+        <p>© 2019 CPS</p>
+        <p>Разработано командой Apesong</p>
+      </div>
+      <div class="footer__col footer__col--center">
         <a href="#" class="footer__link">Политика конфиденциальности</a>
-      </p>
-      <p class="footer__text">
-        Информация, размещенная на данной странице, не является публичной
-        офертой
-      </p>
+      </div>
+      <div class="footer__col footer__col--right">
+        <p
+          >Информация, размещенная на данной странице, не является публичной
+          офертой</p
+        >
+      </div>
     </footer>
   </body>
 </html>
