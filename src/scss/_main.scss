@@ -105,8 +105,6 @@
   padding: 0;
   width: 100%;
   height: auto;
-  // border-top: 1px solid #d9fff5;
-  // background: linear-gradient(to right, #f8f8f8, #ffffff);
 
   &__btn {
     display: none;
@@ -359,7 +357,6 @@
       display: block;
       width: max-content;
       height: 32px;
-      // max-width: none;
     }
   }
 }
@@ -369,6 +366,28 @@
 }
 
 @media (min-width: 768px) {
+  .info-container {
+    flex-direction: row;
+    align-items: stretch;
+
+    &__left,
+    &__right {
+      flex: 1;
+    }
+
+    &__paragraph--size--second {
+      display: block;
+    }
+
+    &__text-part--visible--tablet {
+      display: inline;
+    }
+
+    &__text-part--visible--desktop {
+      display: none;
+    }
+  }
+
   .swiper-brands .swiper-wrapper,
   .swiper-equipments .swiper-wrapper {
     display: grid;
@@ -403,7 +422,6 @@
       flex-direction: column;
       background-color: #ffffff;
       border-radius: 8px;
-      // padding: 0 24px;
       transform: none !important;
     }
   }
@@ -423,7 +441,7 @@
     align-items: center;
     width: 100% !important;
     height: auto;
-    padding: 16px 0;
+    padding: 16px 24px 0;
     border: none;
     border-bottom: 1px solid #eaeaea;
     border-radius: 0;
@@ -469,48 +487,27 @@
   .prices__link {
     display: inline-flex;
     align-items: center;
-
-    // &-icon {
-    //   margin-left: 8px;
-    //   width: 7px;
-    //   height: 10px;
-    // }
-  }
-
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 32px 24px;
-    margin-top: 40px;
-    border-top: 1px solid #d9fff5;
-    background-color: #f8f8f8;
-    color: #7e7e82;
-    font-size: 14px;
-    line-height: 18px;
-
-    &__col {
-      width: 30%;
-
-      &--left {
-        text-align: left;
-      }
-      &--center {
-        text-align: center;
-      }
-      &--right {
-        text-align: right;
-      }
-    }
-
-    &__link {
-      color: #7e7e82;
-      text-decoration: none;
-    }
   }
 }
 
 @media (min-width: 1120px) {
+  .slide-menu {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 10px 6px;
+    padding: 0 10px;
+
+    &__button {
+      flex-shrink: 1;
+    }
+  }
+
+  .info-container {
+    &__text-part--visible--desktop {
+      display: inline;
+    }
+  }
+
   .swiper-brands .swiper-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
