@@ -493,6 +493,10 @@
 }
 
 @media (min-width: 1120px) {
+  .main-content {
+    padding-left: 320px; 
+  }
+
   .slide-menu {
     flex-wrap: wrap;
     overflow-x: visible;
